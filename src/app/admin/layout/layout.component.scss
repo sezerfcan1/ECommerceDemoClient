@@ -1,31 +1,17 @@
-.example-container {
-  width: 98vw ;
-  height: 92vh;
-  margin: 10px;
-  border: 1px solid #555;
-}
+@import "../../../styles.scss";
 
+.custom-container{
+  position: relative;
+  overflow-x: hidden;
+  .navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: $blue;
+    border-left: 10px solid $blue;
+    transition: 0.5s;
+    overflow: hidden;
 
-@media only screen and (min-width: 1024px) {
-  .side-nav{
-    width: 15vw;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .side-nav{
-    width: 17vw;
-  }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-  .side-nav{
-    width: 20vw;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .side-nav{
-    display: none;
+    
   }
 }

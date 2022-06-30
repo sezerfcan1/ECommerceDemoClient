@@ -9,12 +9,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatMenuModule} from '@angular/material/menu';
-
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     LayoutComponent
   ],
   imports: [
+    MatButtonModule,
     CommonModule,
     ComponentsModule,
     RouterModule,

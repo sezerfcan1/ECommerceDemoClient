@@ -1,0 +1,91 @@
+@import "../../../../../styles.scss";
+
+ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    li{
+        position: relative;
+        width: 100%;
+        list-style: none;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+
+        a{
+            position: relative;
+            display: flex;
+            width: 100%;
+            text-decoration: none;
+            color: $white;
+
+            
+
+            .icon{
+                position: relative;
+                display: block;
+                min-width: 60px;
+                height: 60px;
+                line-height: 70px;
+                text-align: center;
+
+                ion-icon{
+                    font-size: 1.75em;
+                }
+
+            }
+
+            .title{
+                position: relative;
+                display: block;
+                padding: 0 10px;
+                height: 60px;
+                line-height: 60px;
+            }
+        }
+
+
+    }
+
+    li:hover{
+        background: $white;
+
+        a{
+            color: $blue;
+        }
+
+        a::before{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -50px;
+            width: 50px;
+            height: 50px;
+            background: $blue;
+            border-radius: 50%;
+            box-shadow: 35px 35px 0 10px $white;
+            pointer-events: none;
+        }
+
+        a::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -50px;
+            width: 50px;
+            height: 50px;
+            background: $blue;
+            border-radius: 50%;
+            box-shadow: 35px -35px 0 10px $white;
+            pointer-events: none;
+        }
+
+    }
+
+    li:nth-child(1)
+    {
+        margin-bottom: 40px;
+        pointer-events: none;
+    }
+
+}

@@ -5,6 +5,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import {MatListModule} from '@angular/material/list';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {MatListModule} from '@angular/material/list';
   imports: [
     CommonModule,
     RouterModule,
-    MatListModule
+    MatListModule,
+    IonicModule
   ],
   exports: [
     HeaderComponent,

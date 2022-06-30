@@ -1,44 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" routerLink="">E-Commerce</a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="products">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active basket-button" aria-current="page" routerLink="baskets">Basket</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="admin">Management Panel</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <div class="float-end">
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success mx-2" type="submit">Search</button>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 pr-0 mr-0 float-end">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="baskets">Basket</a>
-              </li>
-            </ul>
-          </form>
-
-        </div>
+<div class="navbar">
+  <ul class="d-flex">
+    <li>
+      <a class="nav-link active home" aria-current="page" routerLink="">Home</a>
+    </li>
+    <span class="vertical-divider"></span>
+    <li>
+      <a class="nav-link active" aria-current="page" routerLink="products">Product</a>
+    </li>
+    <span class="vertical-divider"></span>
+    <li>
+      <a class="nav-link active" aria-current="page" routerLink="products">Product</a>
+    </li>
+    <span class="vertical-divider"></span>
+    <li>
+      <a class="nav-link active" aria-current="page" routerLink="admin">Management Panel</a>
+    </li>
+    <li class="float-end right-nav">
+      <div class="float-end">
+        <form class="d-flex mx-5">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success fs-6 mx-1" type="submit">Search</button>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 pr-0 mr-0 float-end">
+            <li class="nav-item">
+              <a class="btn btn-outline-success" aria-current="page" routerLink="baskets">Basket</a>
+            </li>
+          </ul>
+    
+        </form>
       </div>
-    </div>
-  </nav>
+    </li>
+</ul>
+</div>
+
 
 <router-outlet></router-outlet>

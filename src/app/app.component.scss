@@ -1,0 +1,39 @@
+.navbar{
+    ul{
+        li{
+            list-style-type: none;
+            .nav-link{
+            color: black;
+            }
+        }
+
+        li:hover{
+            cursor: pointer;
+        }
+
+        .right-nav{
+            display: block;
+            float: inline-end;
+        }
+        .vertical-divider{
+            width: 1px;
+            height: 2vh;
+            background-color: rgb(54, 54, 54);
+            margin: auto;
+        }
+    }
+    .basket-button{
+        float:right;
+        list-style-type: none;
+        color: black;
+    }
+
+    .nav-avatar{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+}
+

@@ -1,4 +1,7 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer class="side-nav" mode="side" opened> <app-sidebar></app-sidebar> </mat-drawer>
-  <mat-drawer-content> <router-outlet></router-outlet> </mat-drawer-content>
-</mat-drawer-container>
+<router-outlet></router-outlet>
+
+<div class="custom-container">
+  <div class="navigation">
+    <app-sidebar></app-sidebar>
+  </div>
+</div>
