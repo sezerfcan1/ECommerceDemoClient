@@ -36,9 +36,11 @@
               }
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/alertifyjs/build/css/alertify.min.css",
+              "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/alertifyjs/build/css/alertify.min.css",
+              "node_modules/alertifyjs/build/css/themes/default.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               {
                 "input": "node_modules/@ionic/angular/css/core.css"
               },
@@ -74,11 +76,11 @@
               }
             ],
             "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/alertifyjs/build/alertify.min.js",
-              "./node_modules/ionicons/dist/esm/ionicons.js",
-              "./node_modules/ionicons/dist/ionicons.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/alertifyjs/build/alertify.min.js",
+              "node_modules/ionicons/dist/esm/ionicons.js",
+              "node_modules/ionicons/dist/ionicons.js"
             ]
           },
           "configurations": {

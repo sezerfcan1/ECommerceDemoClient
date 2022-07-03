@@ -1,7 +1,14 @@
-<router-outlet></router-outlet>
+
 
 <div class="custom-container">
   <div class="navigation">
     <app-sidebar></app-sidebar>
+  </div>
+  <div class="content">
+    <router-outlet>
+
+      <button  (click)="senderoglu()" class="btn btn-success">Right Alert </button>
+
+    </router-outlet>
   </div>
 </div>

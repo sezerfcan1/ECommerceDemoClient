@@ -1,43 +1,47 @@
-import { Component, OnInit  ,ElementRef, Renderer2, OnDestroy } from '@angular/core';
+import { Component, OnInit , ElementRef } from '@angular/core';
+import { Router , RouterLinkActive } from '@angular/router';
+import * as $ from 'jquery';
 
-let list = document.querySelectorAll("li");
+
+function activeSidebarElement() {
+
+  let oldPages = document.getElementsByClassName("hovered");
+  
+  for (const oldPage in oldPages) {
+    if (Object.prototype.hasOwnProperty.call(oldPages, oldPage)) {
+      const element = oldPages[oldPage];
+      element.classList.remove("hovered");
+    }
+  }
 
 
+  let objects = $("app-sidebar > ul > li > .active");
+  for (var obj of objects) {
+    obj.parentElement?.classList.add("hovered");
+  }
+};
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit , OnDestroy {
+export class SidebarComponent implements OnInit {
 
-  constructor(private renderer2: Renderer2,) { }
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
-  }
+  list:any
 
-  private unlistener:any
+  constructor(private elementRef:ElementRef , private router:Router) {
+    document.addEventListener("click",activeSidebarElement)
+   }
+
+
+
 
   ngOnInit(): void {
 
-    this.unlistener = this.renderer2.listen("document", "mousemove", event => {
-      console.log(`I am detecting mousemove at ${event.pageX}, ${event.pageY} on Document!`);
-    });
 
-    list.forEach(element => {
-      element.addEventListener('mouseover',this.activeLink);
-    })
   }
 
-  activeLink = () => {
-    list.forEach(element => {
-      element.classList.remove('hovered');
-      element.classList.add('hovered');
-    });
 
-
-
-    
-  }
 
 }

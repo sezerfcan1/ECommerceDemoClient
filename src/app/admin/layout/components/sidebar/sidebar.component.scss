@@ -47,7 +47,8 @@ ul{
 
     }
 
-    li:hover{
+    li.hovered
+    {
         background: $white;
 
         a{

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-declare var alertify : any
+declare let alertify : any
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +26,7 @@ export enum MessageType{
   Success = "success",
   Warning = "warning"
 }
+
 
 
 export enum Position{

@@ -1,7 +1,6 @@
-import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import { AlertifyService, MessageType, Position } from 'src/app/services/admin/alertify.service';
-
+import {Component, OnInit} from '@angular/core';
+import {AlertifyService, MessageType, Position} from '../../services/admin/alertify.service';
+import {ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-layout',
@@ -10,22 +9,14 @@ import { AlertifyService, MessageType, Position } from 'src/app/services/admin/a
 })
 export class LayoutComponent implements OnInit {
 
-  constructor(private alertify:AlertifyService) {
+
+  constructor(private toastr:ToastrService) {
   }
   ngOnInit(): void {
-
-
-
   }
 
-  rightAlert = () => {
-    this.alertify.message("Hatalı" , MessageType.Error, Position.topRight);
+  senderoglu() {
+    this.toastr.success("Test","Test Başlık");
   }
-
-  leftAlert = () => {
-    this.alertify.message("Hatalı" , MessageType.Error, Position.topLeft);
-  }
-
-
 
 }
